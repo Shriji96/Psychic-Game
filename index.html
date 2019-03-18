@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Psychic Game</title>
 </head>
 <body>
@@ -16,39 +17,16 @@
                   <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
               </nav>
+              <div class="jumbotron jumbotron-fluid big-banner" style="height: 570px; padding: 200px;">
+
     <div id="game"> 
             <p>Guess what letter I'm thinking of</p>
-            <p>Wins:</p>
-            <p>Losses:</p>
-            <p>Guesses Left:</p>
-            <p>Your Guesses So Far:</p>
+            <p>Wins: <div id="wins"></div></p>
+            <p>Losses: <div id="losses"></div></p>
+            <p>Guesses Left: <div id="guesses-left"></div></p>
+            <p>Your Guesses So Far: <div id="guesses"></div></p>
     </div>
-    <script type=text/javascript>
-
-    var computerChoice = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-    document.onkeyup = function(event) {
-
-        var wins = 0;
-        var losses = 0;
-        var guessesLeft = 9;
-        var guessChoices = [];
-
-        var UserGuess = event.key;
-        var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)]; 
-
-        if (UserGuess===computerGuess) {
-            wins++;
-            guessesLeft = 9;
-            guessChoices = [];
-        } else { 
-            losses++;
-            guessesLeft = 9;
-            guessChoices = UserGuess;
-        }
-    }
-    
-   
-     </script>
+    <script src="assets/javascript/game.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
